@@ -1,4 +1,4 @@
-resource "aws_route53_record" "www" {
+resource "aws_route53_record" "private" {
   for_each = var.instances_map
   zone_id = var.zone_id
   name    = "${each.key}.${var.domain_name}" #web.jaswanthdevops.online
